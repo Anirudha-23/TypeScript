@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LOGIN FORM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <form id="registrationForm">
+    <h2>FORM</h2>
+
+    <label for="name">Name:</label>
+    <input type="text" placeholder="Name"id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" placeholder="E-mail" id="email" name="email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" placeholder="password" id="password" name="password" required>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('registrationForm');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      console.log('Name:', name);
+      console.log('Email:', email);
+      console.log('Password:', password);
+
+      alert("Form submitted!");
+    });
+  </script>
+
+</body>
+</html>
