@@ -1,0 +1,63 @@
+/* Center the form on the page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F3E5F5;
+  }
+  
+  .form-container {
+    width: 500px; /* Form width */
+    padding: 40px; /* Padding for the form */
+    background-color: #bfe6df;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 90%; /* Ensure it's responsive */
+  }
+  
+  .form-container h2 {
+    margin-bottom: 20px;
+    color: #333366; /* dark blue heading */
+  }
+  
+  .form-group {
+    margin-bottom: 16px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333366;
+  }
+  
+  .form-group input {
+    width: 100%; /* Full width input fields */
+    padding: 10px 12px; /* Padding for input */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
+    color: #000;
+    background-color: #fff;
+  }
+  
+  .submit-btn {
+    width: 50%; /* Half the size of the input fields */
+    padding: 12px; /* Padding for the button */
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 20px; /* Space between inputs and button */
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
