@@ -6,8 +6,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: none; /* Removed gradient background */
-  overflow: hidden;  /* Prevents scrolling when the video is background */
+  background: none; 
+  overflow: hidden;  
 }
 
 /* Background Video */
@@ -17,19 +17,17 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the video covers the entire viewport */
-  transform: scale(1.1); /* Slightly zoom in the video (make it smaller) */
-  z-index: -1;       /* Keeps the video behind the form */
-  opacity: 0.7;      /* Optional: Adjust opacity for a faded effect */
-  pointer-events: none; /* Prevents interaction with the video */
+  object-fit: cover; 
+  transform: scale(1.1); 
+  z-index: -1;        
+  opacity: 0.7;     
+  pointer-events: none; 
 }
-
-/* Form Container (Ensure the form stays centered) */
 .form-container {
-  position: fixed; /* Fixed position relative to the viewport */
-  top: 50%; /* Vertically center */
-  left: 50%; /* Horizontally center */
-  transform: translate(-50%, -50%); /* Adjust for exact center */
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -79,12 +77,11 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
-/* Label and Input Fields */
 label,
 .input-field,
 .submit-button,
 .show-password-button {
-  color: #3a2525; /* Text color */
+  color: #3a2525; 
 }
 
 /* Input Fields */
