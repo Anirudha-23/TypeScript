@@ -24,11 +24,9 @@ const Form: React.FC = () => {
   };
 
   useEffect(() => {
-    // Change the tab title when the component is mounted
     document.title = "Login - Your App Name";
     
     return () => {
-      // Clean up: reset the title when the component is unmounted
       document.title = "Your App Name";
     };
   }, []);
