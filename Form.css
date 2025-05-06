@@ -1,0 +1,180 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none; /* Removed gradient background */
+  overflow: hidden;  /* Prevents scrolling when the video is background */
+}
+
+/* Background Video */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire viewport */
+  transform: scale(1.1); /* Slightly zoom in the video (make it smaller) */
+  z-index: -1;       /* Keeps the video behind the form */
+  opacity: 0.7;      /* Optional: Adjust opacity for a faded effect */
+  pointer-events: none; /* Prevents interaction with the video */
+}
+
+/* Form Container (Ensure the form stays centered) */
+.form-container {
+  position: fixed; /* Fixed position relative to the viewport */
+  top: 50%; /* Vertically center */
+  left: 50%; /* Horizontally center */
+  transform: translate(-50%, -50%); /* Adjust for exact center */
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Form Box */
+.form-box {
+  background-color: rgb(233, 201, 237);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  opacity: 0;
+  animation: slideUp 0.8s forwards ease-out;
+}
+
+/* Fade-in animation for the form box */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Slide-up animation for the form box */
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Heading Style */
+h2 {
+  color: black;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Label and Input Fields */
+label,
+.input-field,
+.submit-button,
+.show-password-button {
+  color: #3a2525; /* Text color */
+}
+
+/* Input Fields */
+.input-field {
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Focus Effect for Input Fields */
+.input-field:focus {
+  border-color: #007bff;
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  background-color: #16508e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Show Password Button */
+.show-password-button {
+  padding: 0.3rem 0.6rem;
+  background-color: transparent;
+  border: 1px solid #007bff;
+  color: #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.show-password-button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Hover Effects for Form Elements */
+.form-box input,
+.form-box button {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+/* Add animation on submit button hover */
+.submit-button:hover {
+  transform: scale(1.1);
+  background-color: #0056b3;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Make the input fields and submit button "jump" slightly on hover */
+.input-field:hover,
+.submit-button:hover {
+  transform: scale(1.05);
+}
+
+/* Show Password Button Hover */
+.show-password-button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 0.5rem;
+  }
+  .form-box {
+    width: 100%;
+  }
+}
